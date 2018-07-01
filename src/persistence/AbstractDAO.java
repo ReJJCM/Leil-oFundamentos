@@ -16,7 +16,7 @@ public abstract class AbstractDAO {
 	}
 
 	void createDB(String query) throws SQLException {
-		Connection con = DriverManager.getConnection("jdbc:derby:derbyDB;create=true");
+		Connection con = DriverManager.getConnection("jdbc:derby:AuctionHouseDB;create=true");
 		Statement sta = con.createStatement();
 		sta.executeUpdate(query);
 		sta.close();

@@ -44,7 +44,6 @@ public class UserDAO extends AbstractDAO implements GenericDAO<User> {
 
 	@Override
 	public void insert(User user) throws SQLException {
-		createUserTable();
 		Connection con = getConnection();
 		PreparedStatement stmt = con.prepareStatement(
 				"INSERT INTO USERS (NOME, EMAIL, NATIONALID, SELLER, PERSON, COMPANY) VALUES (?,?,?,?,?,?)");
