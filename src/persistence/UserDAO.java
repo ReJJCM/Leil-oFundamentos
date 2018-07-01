@@ -46,7 +46,7 @@ public class UserDAO extends AbstractDAO implements GenericDAO<User> {
 	public void insert(User user) throws SQLException {
 		Connection con = getConnection();
 		PreparedStatement stmt = con.prepareStatement(
-				"INSERT INTO USERS (NOME, EMAIL, NATIONALID, SELLER, PERSON, COMPANY) VALUES (?,?,?,?,?,?)");
+				"INSERT INTO USERS (NAME, EMAIL, NATIONALID, SELLER, PERSON, COMPANY) VALUES (?,?,?,?,?,?)");
 		stmt.setString(1, user.getName());
 		stmt.setString(2, user.getEmail());
 		stmt.setString(3, user.getNationalId());
