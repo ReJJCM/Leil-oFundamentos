@@ -53,7 +53,7 @@ public class UserDAO extends AbstractDAO implements GenericDAO<User> {
 		stmt.setBoolean(4, user.isSeller());
 		stmt.setBoolean(5, user.isPerson());
 		stmt.setBoolean(6, user.isCompany());
-		int ret = stmt.executeUpdate();
+		stmt.executeUpdate();
 		con.close();
 	}
 
